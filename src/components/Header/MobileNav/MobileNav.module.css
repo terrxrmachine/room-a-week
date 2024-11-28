@@ -1,0 +1,59 @@
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  padding: 2rem;
+  width: 90%; /* Используем проценты вместо calc */
+  max-width: 400px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 1000;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.mobileMenu::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 10px;
+  box-shadow:
+    0 0 20px rgba(0, 0, 0, 0.1),
+    0 0 40px rgba(255, 255, 255, 0.5);
+  z-index: -1;
+}
+
+.mobileMenu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.mobileMenu nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+@media (max-width: 950px) {
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+  }
+}

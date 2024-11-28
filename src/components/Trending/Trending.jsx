@@ -1,6 +1,8 @@
+import styles from "./Trending.module.css";
+
 function Trending() {
   return (
-    <div>
+    <div className={styles.container}>
       <button>aboba</button>
     </div>
   );

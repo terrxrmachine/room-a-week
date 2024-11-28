@@ -6,6 +6,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .default {
@@ -31,8 +35,8 @@
   color: white;
 }
 
-.fullWidth {
-  width: 100%;
+.secondary:hover {
+  background-color: #c43e3e;
 }
 
 .outline {
@@ -44,4 +48,28 @@
 .outline:hover {
   background-color: #4169E1;
   color: white;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+/* Стили для AuthButton */
+.authLink {
+  text-decoration: none;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 950px) {
+  .authLink {
+    width: 100%;
+  }
+  
+  .authLink .button {
+    width: 100%;
+  }
 }
