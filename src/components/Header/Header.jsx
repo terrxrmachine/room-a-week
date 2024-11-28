@@ -1,20 +1,39 @@
-import { Link } from "react-router-dom";
-import "./Header.module.css";
+import { Link, NavLink } from "react-router-dom";
+import styles from "./Header.module.css";
+import Button from "../ui/Button/Button";
+import { Home, Search, User } from "lucide-react";
 
 function Header() {
   return (
-    <header className="header">
-      <div className="logo">
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <Link to="/">ROOM a week</Link>
       </div>
       <nav>
-        <Link to="/page1">Host A Room</Link>
-        <Link to="/page2">Find A Room</Link>
+        <NavLink
+          to="/host"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          <Home size={20} className={styles.icon} />
+          Host A Room
+        </NavLink>
+        <NavLink
+          to="/rent"
+          className={({ isActive }) => (isActive ? styles.active : "")}
+        >
+          <Search size={20} className={styles.icon} />
+          Find A Room
+        </NavLink>
       </nav>
-      <div className="auth-buttons">
-        <Link to="/sign-in">Sign in</Link>
-        <Link to="/sign-up" className="sign-up">
-          Sign up
+      <div className={styles["auth-buttons"]}>
+        <Link to="/sign-in">
+          <Button variant="default">
+            <User size={20} className={styles.icon} />
+            Sign in
+          </Button>
+        </Link>
+        <Link to="/sign-up">
+          <Button variant="primary">Sign up</Button>
         </Link>
       </div>
     </header>

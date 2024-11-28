@@ -1,4 +1,4 @@
-import { InputForm } from "./InputForm.jsx/InputForm";
+import InputForm from "./InputForm.jsx/InputForm";
 import { VideoForm } from "./VideoForm/VideoForm";
 
 function LeadForm() {

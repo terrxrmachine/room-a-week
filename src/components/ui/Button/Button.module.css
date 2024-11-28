@@ -1,0 +1,47 @@
+.button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.default {
+  background-color: transparent;
+  color: #333;
+}
+
+.default:hover {
+  color: #4169E1;
+}
+
+.primary {
+  background-color: #4169E1;
+  color: white;
+}
+
+.primary:hover {
+  background-color: #3557B7;
+}
+
+.secondary {
+  background-color: #dd4747;
+  color: white;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.outline {
+  background-color: transparent;
+  border: 1px solid #4169E1;
+  color: #4169E1;
+}
+
+.outline:hover {
+  background-color: #4169E1;
+  color: white;
+}
