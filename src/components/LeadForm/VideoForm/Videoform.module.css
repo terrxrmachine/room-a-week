@@ -10,8 +10,8 @@
 
 @media (max-width: 768px) {
   .container {
+    height: auto;
     padding: 1.5rem;
-    width: 90%; 
     margin-top: 0;
   }
 }

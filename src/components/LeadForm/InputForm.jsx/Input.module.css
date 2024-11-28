@@ -11,6 +11,8 @@
 @media (max-width: 768px) {
   .formContainer {
     height: auto;
+    margin-top: 4.5rem;
+    padding: 1.5rem;
   }
 }
 
