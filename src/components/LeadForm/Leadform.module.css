@@ -1,0 +1,36 @@
+.container {
+  background: linear-gradient(135deg,
+    rgba(135, 206, 250, 0.3) 0%,
+    rgba(221, 160, 221, 0.3) 50%,
+    rgba(144, 238, 144, 0.3) 100%
+  );
+  padding: 3rem;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.forms {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1440px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 968px) {
+  .container {
+    padding: 2rem;
+  }
+  
+  .forms {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .forms > * {
+    width: 100%;
+  }
+}

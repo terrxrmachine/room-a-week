@@ -1,0 +1,61 @@
+/* Featured.module.css */
+.featured {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.highlight {
+  color: #4CAF50;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.logoLink {
+  transition: opacity 0.3s ease;
+}
+
+.logoLink:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  height: 30px;
+  /* Применяем серый цвет к SVG */
+  filter: grayscale(1) brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  /* При наведении делаем немного светлее */
+  filter: grayscale(1) brightness(1);
+}
+
+@media (max-width: 768px) {
+  .logos {
+    gap: 1.5rem;
+  }
+  
+  .logo {
+    height: 20px;
+  }
+}
