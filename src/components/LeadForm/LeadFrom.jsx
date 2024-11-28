@@ -1,6 +1,6 @@
 import InputForm from "./InputForm.jsx/InputForm";
 import { VideoForm } from "./VideoForm/VideoForm";
-import styles from "./LeadForm.module.css";
+import styles from "./Leadform.module.css";
 
 function LeadForm() {
   return (
