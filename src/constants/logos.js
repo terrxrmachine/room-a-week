@@ -1,6 +1,6 @@
 export const logos = [
   {
-    src: "/public/logos/Fast_Company_logo.svg",
+    src: "/public/logos/NewYorkTimes.svg",
     alt: 'The New York Times',
     url: 'https://nytimes.com',
   },

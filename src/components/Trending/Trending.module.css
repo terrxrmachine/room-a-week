@@ -1,11 +1,104 @@
 .container {
-  background: linear-gradient(135deg,
-    rgba(135, 206, 250, 0.3) 0%,
-    rgba(221, 160, 221, 0.3) 50%,
-    rgba(144, 238, 144, 0.3) 100%
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+   rgba(135, 206, 250, 0.3) 0%,
+   rgba(221, 160, 221, 0.3) 50%,
+   rgba(144, 238, 144, 0.3) 100%
   );
+  animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
   padding: 3rem;
-  min-height: 10vh;
+  text-align: center;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.content {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  color: white;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.cities {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.cities span {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  padding: 0 0.5rem;
+}
+
+.cities span:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  color: #ff6b6b;
+}
+
+.button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: white;
+  color: #4facfe;
+  transform: translateY(-2px);
+}
+
+/* Бейдж trending */
+.trending {
+  position: absolute;
+  top: 2rem;
+  right: -2rem;
+  background: #ff6b6b;
+  color: white;
+  padding: 0.5rem 3rem;
+  transform: rotate(45deg);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+  
+  .cities {
+    font-size: 0.9rem;
+  }
+  
+  .title {
+    font-size: 1.2rem;
+  }
 }
