@@ -34,7 +34,10 @@ function Header() {
 
           <div className={styles.desktopMenu}>
             <DesktopNav />
-            <AuthButton />
+            <div className={styles.authButtons}>
+              <AuthButton type="signin" />
+              <AuthButton type="signup" />
+            </div>
           </div>
         </div>
       </header>

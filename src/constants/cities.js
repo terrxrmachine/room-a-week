@@ -1,68 +1,68 @@
 export const cities = [
   {
     id: 1,
-    name: 'ATLANTIC',
-    image: '/public/cities/atlantic.jpeg',
+    name: 'ATLANTIC CITY',
+    image: '/public/cities/atlantic.webp',
     price: 145
   },
   {
     id: 2,
     name: 'AUSTIN',
-    image: '/public/cities/austin.jpg',
+    image: '/public/cities/austin.webp',
     price: 153
   },
   {
     id: 3,
     name: 'BALTIMORE',
-    image: '/public/cities/baltimore.jpg',
+    image: '/public/cities/baltimore.webp',
     price: 160
   },
   {
     id: 4,
     name: 'CHARLOTTE',
-    image: '/public/cities/chrlotte.jpg',
+    image: '/public/cities/chrlotte.webp',
     price: 142
   },
   {
     id: 5,
     name: 'DALLAS',
-    image: '/public/cities/dallas.jpg',
+    image: '/public/cities/dallas.webp',
     price: 158
   },
   {
     id: 6,
     name: 'HOUSTON',
-    image: '/public/cities/houston.jpg',
+    image: '/public/cities/houston.webp',
     price: 155
   },
   {
     id: 7,
     name: 'JACKSONVILLE',
-    image: '/public/cities/jacksonville.jpg',
+    image: '/public/cities/jacksonville.webp',
     price: 147
   },
   {
     id: 8,
-    name: 'KANSAS C',
-    image: '/public/cities/kansas.jpg',
+    name: 'KANSAS CITY',
+    image: '/public/cities/kansas.webp',
     price: 149
   },
   {
     id: 9,
     name: 'MIAMI',
-    image: '/public/cities/miami.jpg',
+    image: '/public/cities/miami.webp',
     price: 165
   },
   {
     id: 10,
-    name: 'N.ORLEANS',
-    image: '/public/cities/neworleans.jpg',
+    name: 'NEW ORLEANS',
+    image: '/public/cities/neworleans.webp',
     price: 151
   },
   {
     id: 11,
     name: 'ORLANDO',
-    image: '/public/cities/orlando.jpg',
+    image: '/public/cities/orlando.webp',
     price: 157
   },
   {
@@ -74,25 +74,25 @@ export const cities = [
   {
     id: 13,
     name: 'PHOENIX',
-    image: '/public/cities/phoenix.jpg',
+    image: '/public/cities/phoenix.webp',
     price: 156
   },
   {
     id: 14,
     name: 'RALEIGH',
-    image: '/public/cities/raleigh.jpg',
+    image: '/public/cities/raleigh.webp',
     price: 148
   },
   {
     id: 15,
     name: 'RICHMOND',
-    image: '/public/cities/richmond.jpg',
+    image: '/public/cities/richmond.webp',
     price: 144
   },
   {
     id: 16,
-    name: 'SAN ANT',
-    image: '/public/cities/sanantonio.jpeg',
+    name: 'SAN ANTONIO',
+    image: '/public/cities/sanantonio.webp',
     price: 150
   },
   {
@@ -104,7 +104,7 @@ export const cities = [
   {
     id: 18,
     name: 'WASHINGTON',
-    image: '/public/cities/washington.jpg',
+    image: '/public/cities/washington.webp',
     price: 162
   }
 ];

@@ -74,6 +74,12 @@
   opacity: 1;
 }
 
+.authButtons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 @media (max-width: 950px) {
   .header {
     margin: 0;
