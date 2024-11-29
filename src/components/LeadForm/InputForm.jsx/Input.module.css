@@ -25,7 +25,7 @@
 
 .subtitle {
   font-size: 1.2rem;
-  color: #4169E1;
+  color: #4a90e2;
   margin-bottom: 2rem;
 }
 
@@ -61,7 +61,7 @@
 
 .inputGroup input:focus {
   outline: none;
-  border-color: #4169E1;
+  border-color: #4a90e2;
   background-color: white;
 }
 

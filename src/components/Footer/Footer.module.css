@@ -1,0 +1,98 @@
+.footer {
+  padding: 3rem 0 2rem;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  max-width: 800px;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.copyright {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.links a:hover {
+  color: #4169E1;
+}
+
+.moreButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.moreButton:hover {
+  color: #4169E1;
+}
+
+@media (max-width: 768px) {
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

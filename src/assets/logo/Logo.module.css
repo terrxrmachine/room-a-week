@@ -1,0 +1,19 @@
+.logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.text {
+  color: #4169E1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.subtext {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1;
+}

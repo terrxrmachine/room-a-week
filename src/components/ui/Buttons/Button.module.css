@@ -18,11 +18,11 @@
 }
 
 .default:hover {
-  color: #4169E1;
+  color: #4a90e2;
 }
 
 .primary {
-  background-color: #4169E1;
+  background-color: #4a90e2;
   color: white;
 }
 
@@ -41,12 +41,12 @@
 
 .outline {
   background-color: transparent;
-  border: 1px solid #4169E1;
-  color: #4169E1;
+  border: 1px solid #4a90e2;
+  color: #4a90e2;
 }
 
 .outline:hover {
-  background-color: #4169E1;
+  background-color: #4a90e2;
   color: white;
 }
 
@@ -54,7 +54,7 @@
   width: 100%;
 }
 
-/* Стили для AuthButton */
+/* Auth Button styles */
 .authLink {
   text-decoration: none;
 }
@@ -64,12 +64,28 @@
   align-items: center;
 }
 
+/* Carousel Button styles */
+.carouselButton {
+  padding: 0.5rem;
+  border-radius: 50%;
+  min-width: 40px;
+  height: 40px;
+}
+
+/* Navigation Button styles */
+.navLink {
+  text-decoration: none;
+}
+
+/* Responsive styles */
 @media (max-width: 950px) {
-  .authLink {
+  .authLink,
+  .navLink {
     width: 100%;
   }
   
-  .authLink .button {
+  .authLink .button,
+  .navLink .button {
     width: 100%;
   }
 }

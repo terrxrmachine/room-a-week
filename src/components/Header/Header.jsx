@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
 import { DesktopNav } from "./DesktopNav/DesktopNav";
 import { MobileNav } from "./MobileNav/MobileNav";
-import { AuthButton } from "../ui/Button/AuthButton";
+import { AuthButton } from "../ui/Buttons/AuthButton";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

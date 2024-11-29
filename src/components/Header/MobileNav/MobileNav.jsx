@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Home, Search } from "lucide-react";
 import styles from "./MobileNav.module.css";
-import { AuthButton } from "../../ui/Button/AuthButton";
+import { AuthButton } from "../../ui/Buttons/AuthButton";
 
 export function MobileNav({ isOpen, onClose }) {
   return (

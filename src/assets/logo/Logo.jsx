@@ -1,0 +1,14 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./Logo.module.css";
+
+function Logo() {
+  return (
+    <Link to="/" className={styles.logo}>
+      <span className={styles.text}>ROOM</span>
+      <span className={styles.subtext}>a week</span>
+    </Link>
+  );
+}
+
+export default Logo;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Calendar } from "lucide-react";
 import styles from "./Input.module.css";
-import Button from "../../ui/Button/Button";
+import Button from "../../ui/Buttons/Button";
 import Input from "../../ui/Input/Input";
 
 function InputForm() {

@@ -1,0 +1,16 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.author {
+  font-weight: 600;
+  color: #4a90e2;
+}

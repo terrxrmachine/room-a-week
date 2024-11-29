@@ -11,7 +11,7 @@ function Trending() {
         </div>
         <button className={styles.button}>SEARCH TRENDS</button>
       </div>
-      <div className={styles.trending}>TRENDING</div>
+      {/* <div className={styles.trending}>TRENDING</div> */}
     </div>
   );
 }
