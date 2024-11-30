@@ -3,6 +3,7 @@ import Featured from "../components/Featured/Featured";
 import Trending from "../components/Trending/Trending";
 import PopularCities from "../components/PopularCities/PopularCities";
 import Reviews from "../components/Reviews/Reviews";
+import Explore from "../components/Explore/Explore";
 import FAQ from "../components/FAQ/FAQ";
 
 function Home() {
@@ -13,6 +14,7 @@ function Home() {
       <PopularCities />
       <Trending />
       <Reviews />
+      <Explore />
       <FAQ />
     </div>
   );

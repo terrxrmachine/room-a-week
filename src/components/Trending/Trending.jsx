@@ -1,4 +1,5 @@
 import styles from "./Trending.module.css";
+import Button from "../ui/Buttons/Button";
 
 function Trending() {
   return (
@@ -9,7 +10,14 @@ function Trending() {
           <span>MIAMI</span> | <span>TAMPA</span> | <span>AUSTIN</span> |
           <span>LAS VEGAS</span> | <span>BALTIMORE</span> | <span>ATLANTA</span>
         </div>
-        <button className={styles.button}>SEARCH TRENDS</button>
+        <Button
+          variant="primary"
+          onClick={() => {
+            /* handle click */
+          }}
+        >
+          SEARCH TRENDS
+        </Button>
       </div>
       {/* <div className={styles.trending}>TRENDING</div> */}
     </div>
