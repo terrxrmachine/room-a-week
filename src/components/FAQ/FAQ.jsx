@@ -1,5 +1,5 @@
 import React from "react";
-import FAQCard from "./FAQcard/FAQcard";
+import FAQCard from "./FAQCard/FAQCard";
 import InfoCard from "./InfoCard/InfoCard";
 import styles from "./FAQ.module.css";
 
