@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AccordionItem from "../AccrodionItem./AccordionItem";
+import AccordionItem from "../AccrodionItem/AccordionItem";
 import { faqItems } from "../../../constants/faqItems";
 import styles from "./FAQCard.module.css";
 
