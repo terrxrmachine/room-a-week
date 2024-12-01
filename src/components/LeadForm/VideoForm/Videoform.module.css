@@ -51,6 +51,12 @@
   overflow: hidden;
   aspect-ratio: 16/9;
   margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.videoCard:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 .videoPreview {
@@ -94,11 +100,12 @@
 }
 
 .callToAction h2 {
+  font-family: Futura;
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
-  color: #333;
+  color: #2c2c2c;
 }
 
 .underline {

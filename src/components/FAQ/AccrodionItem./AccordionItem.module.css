@@ -21,16 +21,32 @@
   background-color: #f8f9fa;
 }
 
+.accordionHeader.active {
+  background-color: #f8f9fa;
+}
+
 .question {
   font-size: 1rem;
   color: #333;
 }
 
 .accordionContent {
-  padding: 1rem;
   background-color: #f8f9fa;
   line-height: 1.6;
   color: #666;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.accordionContent.open {
+  max-height: 500px; /* Достаточно большое значение для контента */
+  opacity: 1;
+}
+
+.contentInner {
+  padding: 1rem;
 }
 
 .actionButton {

@@ -50,7 +50,7 @@ export function VideoForm() {
 
       <div className={styles.videoCard}>
         <img
-          src="/api/placeholder/600/400"
+          src="/cities/austin.webp"
           alt="Room a week video preview"
           className={styles.videoPreview}
         />

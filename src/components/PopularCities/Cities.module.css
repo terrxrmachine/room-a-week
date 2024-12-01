@@ -16,25 +16,38 @@
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
-  margin: 2rem 0;
+  font-family: Futura;
+  color: #2c2c2c;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: Futura;
+  margin-top: 1rem;
+  color: #2c2c2c;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  padding: 3rem;
+  padding: 1rem;  /* Padding для мобильной версии */
   max-width: 1320px;
   width: 100%;
   margin: 0 auto;
 }
 
+/* Стили для планшетов */
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;  /* Увеличенный padding для планшетов и выше */
   }
 }
 
+/* Стили для десктопов */
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);

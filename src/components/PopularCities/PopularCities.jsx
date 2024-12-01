@@ -6,8 +6,8 @@ import CityCard from "../ui/CityCard/CityCard";
 const PopularCities = () => {
   return (
     <div className={styles.container}>
-      <h1>Explore a Room A Week</h1>
-      <h2 className={styles.title}>Popular Cities</h2>
+      <h1 className={styles.title}>Explore a Room A Week</h1>
+      <h2 className={styles.subtitle}>Popular Cities</h2>
       <div className={styles.grid}>
         {cities.map((city) => (
           <CityCard

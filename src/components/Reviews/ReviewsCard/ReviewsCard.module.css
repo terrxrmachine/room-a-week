@@ -1,0 +1,13 @@
+.heading {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: Futura;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+}

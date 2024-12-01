@@ -22,7 +22,10 @@ function Header() {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.logo}>
-            <Link to="/">ROOM a week</Link>
+            <Link to="/">
+              ROOM
+              <span className={styles.sublogo}>a week</span>
+            </Link>
           </div>
 
           <button

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MoreHorizontal } from "lucide-react";
-import Logo from "../../assets/logo/Logo";
 import styles from "./Footer.module.css";
 
 function Footer() {
@@ -11,8 +10,11 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <div className={styles.content}>
-          <div className={styles.logoSection}>
-            <Logo />
+          <div className={styles.logo}>
+            <Link to="/">
+              ROOM
+              <span className={styles.sublogo}>a week</span>
+            </Link>
           </div>
           <div className={styles.description}>
             <p>
@@ -24,7 +26,7 @@ function Footer() {
           </div>
           <div className={styles.subtitle}>
             <p>
-              Room-A-Week an Online Resource For Rental Home Owners and Renters
+              Room-A-Week an online resource for rental home owners and renters
             </p>
           </div>
         </div>
