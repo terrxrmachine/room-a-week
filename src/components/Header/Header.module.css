@@ -52,47 +52,6 @@
   line-height: 1.2;
 }
 
-.menuButton {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
-.desktopMenu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex: 1;
-  margin-left: 2rem;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 999;
-}
-
-.overlay.open {
-  display: block;
-  opacity: 1;
-}
-
-.authButtons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
 @media (max-width: 950px) {
   .header {
     margin: 0;
@@ -105,8 +64,39 @@
   .menuButton {
     display: block;
   }
+}
 
-  .desktopMenu {
-    display: none;
+.nav {
+  display: flex;
+  gap: 2rem;
+  margin: 0 auto;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+@media (min-width: 950px) {
+  .nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4169E1;
+    transition: width 0.3s ease;
+  }
+
+  .nav a:hover::after,
+  .nav a.active::after {
+    width: 100%;
   }
 }

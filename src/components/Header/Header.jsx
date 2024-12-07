@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import styles from "./Header.module.css";
-import { DesktopNav } from "./DesktopNav/DesktopNav";
-import { MobileNav } from "./MobileNav/MobileNav";
-import { AuthButton } from "../ui/Buttons/AuthButton";
+import { NavLink } from "react-router-dom";
+import { Home, Search } from "lucide-react";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen] = useState(false);
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -18,40 +16,33 @@ function Header() {
   }, [isMenuOpen]);
 
   return (
-    <>
-      <header className={styles.header}>
-        <div className={styles.headerContent}>
-          <div className={styles.logo}>
-            <Link to="/">
-              ROOM
-              <span className={styles.sublogo}>a week</span>
-            </Link>
-          </div>
-
-          <button
-            className={styles.menuButton}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
-
-          <div className={styles.desktopMenu}>
-            <DesktopNav />
-            <div className={styles.authButtons}>
-              <AuthButton type="signin" />
-              <AuthButton type="signup" />
-            </div>
-          </div>
+    <header className={styles.header}>
+      <div className={styles.headerContent}>
+        <div className={styles.logo}>
+          <Link to="/">
+            ROOM
+            <span className={styles.sublogo}>a week</span>
+          </Link>
         </div>
-      </header>
 
-      <div
-        className={`${styles.overlay} ${isMenuOpen ? styles.open : ""}`}
-        onClick={() => setIsMenuOpen(false)}
-      />
-
-      <MobileNav isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-    </>
+        <nav className={styles.nav}>
+          <NavLink
+            to="/host"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <Home size={20} />
+            <span>Host A Room</span>
+          </NavLink>
+          <NavLink
+            to="/rent"
+            className={({ isActive }) => (isActive ? styles.active : "")}
+          >
+            <Search size={20} />
+            <span>Find A Room</span>
+          </NavLink>
+        </nav>
+      </div>
+    </header>
   );
 }
 

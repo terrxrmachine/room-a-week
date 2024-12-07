@@ -37,14 +37,23 @@
 }
 
 .inputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1.5rem 1rem;
 }
 
 .inputGroup label {
   font-weight: 500;
   color: #333;
+}
+
+.inputGroupRow {
+  display: flex;
+  gap: 1rem; /* Расстояние между полями */
+}
+
+.inputGroupRow > div {
+  flex: 1; /* Обеспечивает равную ширину полей */
 }
 
 .required {

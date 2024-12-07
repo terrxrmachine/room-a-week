@@ -54,9 +54,9 @@ export function VideoForm() {
           alt="Room a week video preview"
           className={styles.videoPreview}
         />
-        <div className={styles.playButton}>
+        {/* <div className={styles.playButton}>
           <div className={styles.playIcon} />
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.callToAction}>
