@@ -1,0 +1,47 @@
+.container {
+  max-width: 1320px;
+  margin: 3rem auto;
+  padding: 3rem;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+  font-family: futura;
+}
+
+.h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.p {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #2c2c2c;
+}
+
+.a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+.span {
+    font-weight: 700;
+    color: #2c2c2c;
+}
+
+.ul {
+  margin-left: 2rem;
+  color: #2c2c2c;
+}

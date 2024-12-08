@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./Header.module.css";
 import { NavLink } from "react-router-dom";
 import { Home, Search } from "lucide-react";
+import styles from "./Header.module.css";
 
 function Header() {
   const [isMenuOpen] = useState(false);
@@ -31,14 +31,16 @@ function Header() {
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
             <Home size={20} />
-            <span>Host A Room</span>
+            <span className={styles.desktopText}>Host A Room</span>
+            <span className={styles.mobileText}>Host</span>
           </NavLink>
           <NavLink
             to="/rent"
             className={({ isActive }) => (isActive ? styles.active : "")}
           >
             <Search size={20} />
-            <span>Find A Room</span>
+            <span className={styles.desktopText}>Find A Room</span>
+            <span className={styles.mobileText}>Rent</span>
           </NavLink>
         </nav>
       </div>

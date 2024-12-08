@@ -8,6 +8,32 @@ export function VideoForm() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.callToAction}>
+        {formType === "rent" ? (
+          <>
+            <h2>Instant approval.</h2>
+            <h2>Move in today</h2>
+          </>
+        ) : (
+          <>
+            <h2>Start earning</h2>
+            <h2>List your property today</h2>
+          </>
+        )}
+        <div className={styles.underline} />
+      </div>
+
+      <div className={styles.videoCard}>
+        <img
+          src="/cities/austin.webp"
+          alt="Room a week video preview"
+          className={styles.videoPreview}
+        />
+        {/* <div className={styles.playButton}>
+          <div className={styles.playIcon} />
+        </div> */}
+      </div>
+
       <div className={styles.benefits}>
         {formType === "rent" ? (
           // Benefits для арендаторов
@@ -46,32 +72,6 @@ export function VideoForm() {
             </div>
           </>
         )}
-      </div>
-
-      <div className={styles.videoCard}>
-        <img
-          src="/cities/austin.webp"
-          alt="Room a week video preview"
-          className={styles.videoPreview}
-        />
-        {/* <div className={styles.playButton}>
-          <div className={styles.playIcon} />
-        </div> */}
-      </div>
-
-      <div className={styles.callToAction}>
-        {formType === "rent" ? (
-          <>
-            <h2>Instant approval.</h2>
-            <h2>Move in today</h2>
-          </>
-        ) : (
-          <>
-            <h2>Start earning</h2>
-            <h2>List your property today</h2>
-          </>
-        )}
-        <div className={styles.underline} />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, User } from "lucide-react";
 import styles from "./Input.module.css";
 import Button from "../../ui/Buttons/Button";
 import Input from "../../ui/Input/Input";
+import MessageSent from "../../Modals/MessageSent/MessageSent";
 
 function InputForm() {
   const location = useLocation();
@@ -25,10 +26,13 @@ function InputForm() {
         }
   );
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // Add form submission logic here
+    setIsModalOpen(true); // Открываем модальное окно
+    // Здесь можно добавить логику отправки данных на сервер
   };
 
   const handleChange = (e) => {
@@ -36,6 +40,10 @@ function InputForm() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -150,6 +158,9 @@ function InputForm() {
           {formType === "rent" ? "FIND A ROOM A WEEK" : "LIST YOUR PROPERTY"}
         </Button>
       </form>
+
+      {/* Отображение модального окна */}
+      {isModalOpen && <MessageSent onClose={closeModal} />}
     </div>
   );
 }

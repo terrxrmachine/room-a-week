@@ -14,6 +14,15 @@
     margin-top: 5rem;
     padding: 1.5rem;
   }
+
+  .inputGroupRow {
+    flex-direction: column;
+  }
+
+  .inputGroupRow > div {
+    flex: 0 0 auto; /* Отменяем равную ширину полей */
+    width: 100%; /* Устанавливаем ширину 100% для каждого поля */
+  }
 }
 
 .title {

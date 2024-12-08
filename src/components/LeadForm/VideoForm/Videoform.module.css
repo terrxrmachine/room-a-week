@@ -8,15 +8,6 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 768px) {
-  .container {
-    height: auto;
-    padding: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 1rem;
-  }
-}
-
 .benefits {
   display: flex;
   align-items: center;
@@ -50,7 +41,7 @@
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16/9;
-  margin: 1rem 0;
+  margin: 4rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
@@ -111,15 +102,14 @@
 .underline {
   width: 100px;
   height: 3px;
-  background: #4CAF50;
+  background: #4a90e2;
   margin: 1rem auto 0;
   border-radius: 2px;
 }
 
 @media (max-width: 768px) {
   .benefits {
-    flex-direction: column;
-    gap: 0.8rem;
+    display: none;
   }
 
   .divider {
@@ -128,5 +118,12 @@
 
   .callToAction h2 {
     font-size: 2rem;
+  }
+
+  .container {
+    height: auto;
+    padding: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 }

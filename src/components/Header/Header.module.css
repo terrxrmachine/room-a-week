@@ -17,9 +17,7 @@
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(8px);
   border-radius: 10px;
-  box-shadow:
-    0 0 20px rgba(0, 0, 0, 0.1),
-    0 0 40px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(255, 255, 255, 0.5);
   z-index: -1;
 }
 
@@ -52,20 +50,6 @@
   line-height: 1.2;
 }
 
-@media (max-width: 950px) {
-  .header {
-    margin: 0;
-  }
-
-  .headerContent {
-    padding: 0 2rem;
-  }
-
-  .menuButton {
-    display: block;
-  }
-}
-
 .nav {
   display: flex;
   gap: 2rem;
@@ -83,20 +67,52 @@
   position: relative;
 }
 
-@media (min-width: 950px) {
-  .nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #4169E1;
-    transition: width 0.3s ease;
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4169E1;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+.desktopText {
+  display: inline;
+}
+
+.mobileText {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .header {
+    margin: 0;
   }
 
-  .nav a:hover::after,
-  .nav a.active::after {
-    width: 100%;
+  .headerContent {
+    padding: 0 2rem;
+  }
+
+  .menuButton {
+    display: block;
+  }
+
+  .desktopText {
+    display: none; /* Скрыть длинный текст */
+  }
+
+  .mobileText {
+    display: inline; /* Показать короткий текст */
+  }
+
+  .nav a::after {
+    display: none; /* Убрать подчеркивание на мобильных, если не нужно */
   }
 }
