@@ -10,7 +10,7 @@ function RentForm({ formData, handleChange, setFormData }) {
         label="Name"
         required
         name="name"
-        value={formData.name}
+        value={formData.name || ""} // Ensure value is always defined
         onChange={handleChange}
         placeholder="Enter First Name"
         icon={User}
@@ -20,7 +20,7 @@ function RentForm({ formData, handleChange, setFormData }) {
         type="email"
         required
         name="email"
-        value={formData.email}
+        value={formData.email || ""} // Ensure value is always defined
         onChange={handleChange}
         placeholder="Enter Email"
         icon={Mail}
@@ -31,11 +31,11 @@ function RentForm({ formData, handleChange, setFormData }) {
           label="Your Move In Date"
           type="date"
           name="moveInDate"
-          value={formData.moveInDate}
+          value={formData.moveInDate || ""} // Ensure value is always defined
           onChange={handleChange}
         />
         <CityInput
-          value={formData.city}
+          value={formData.city || ""} // Ensure value is always defined
           onChange={(value) => setFormData({ ...formData, city: value })}
         />
       </div>

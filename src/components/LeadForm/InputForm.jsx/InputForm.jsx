@@ -24,6 +24,7 @@ function InputForm() {
           name: "",
           email: "",
           moveInDate: "",
+          city: "",
         }
   );
 
