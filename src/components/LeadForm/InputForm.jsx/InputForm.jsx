@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { Mail, Phone, MapPin, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import styles from "./Input.module.css";
 import Button from "../../ui/Buttons/Button";
-import Input from "../../ui/Input/Input";
+import HostForm from "./HostForm/HostForm";
+import RentForm from "./RentForm/RentForm";
 import MessageSent from "../../Modals/MessageSent/MessageSent";
 
 function InputForm() {
@@ -45,10 +45,13 @@ function InputForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log("Submitting form data:", formData); // Лог данных
+    const sheetType = formType === "host" ? "host" : "rent";
+    const apiUrl = `https://api.sheetbest.com/sheets/bbcbcda8-3941-4b79-b337-b84399428d27?sheet=${sheetType}`;
+
+    console.log("Submitting form data:", formData);
 
     try {
-      const response = await fetch("http://localhost:3000/submit-form", {
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -72,7 +75,7 @@ function InputForm() {
 
     setFormData((prevFormData) => ({
       ...prevFormData,
-      [name]: value || "", // Гарантируем, что значение не станет `undefined`
+      [name]: value || "",
     }));
   };
 
@@ -120,88 +123,13 @@ function InputForm() {
 
         <form onSubmit={handleSubmit} className={styles.form}>
           {formType === "host" ? (
-            <>
-              <div className={styles.inputGroupRow}>
-                <Input
-                  label="First Name"
-                  required
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  placeholder="Enter First Name"
-                />
-                <Input
-                  label="Last Name"
-                  required
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                  placeholder="Enter Last Name"
-                />
-              </div>
-
-              <div className={styles.inputGroupRow}>
-                <Input
-                  label="Phone Number"
-                  type="tel"
-                  required
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  icon={Phone}
-                  placeholder="Enter Phone Number"
-                />
-                <Input
-                  label="Email"
-                  type="email"
-                  required
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Enter Email"
-                  icon={Mail}
-                />
-              </div>
-
-              <Input
-                label="City"
-                required
-                name="city"
-                value={formData.city}
-                onChange={handleChange}
-                icon={MapPin}
-                placeholder="Enter City"
-              />
-            </>
+            <HostForm
+              formData={formData}
+              handleChange={handleChange}
+              setFormData={setFormData}
+            />
           ) : (
-            <>
-              <Input
-                label="Name"
-                required
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Enter First Name"
-                icon={User}
-              />
-              <Input
-                label="Email"
-                type="email"
-                required
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Enter Email"
-                icon={Mail}
-              />
-              <Input
-                label="Your Move In Date"
-                type="date"
-                name="moveInDate"
-                value={formData.moveInDate}
-                onChange={handleChange}
-              />
-            </>
+            <RentForm formData={formData} handleChange={handleChange} />
           )}
 
           <p className={styles.terms}>
@@ -218,7 +146,6 @@ function InputForm() {
           </Button>
         </form>
 
-        {/* Отображение модального окна */}
         {isModalOpen && <MessageSent onClose={closeModal} />}
       </div>
     </>

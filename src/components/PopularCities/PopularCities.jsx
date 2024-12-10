@@ -1,5 +1,5 @@
 import React from "react";
-import { cities } from "../../constants/cities";
+import { imagesCities } from "../../constants/imagesCities";
 import styles from "./Cities.module.css";
 import CityCard from "../ui/CityCard/CityCard";
 
@@ -9,7 +9,7 @@ const PopularCities = () => {
       <h1 className={styles.title}>Explore a Room A Week</h1>
       <h2 className={styles.subtitle}>Popular Cities</h2>
       <div className={styles.grid}>
-        {cities.map((city) => (
+        {imagesCities.map((city) => (
           <CityCard
             key={city.id}
             name={city.name}

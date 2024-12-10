@@ -1,0 +1,23 @@
+.cityInputWrapper {
+  position: relative;
+}
+
+.cityInputList {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #e5e7eb; /* Tailwind's border-gray-300 */
+  margin-top: 0.25rem; /* Tailwind's mt-1 */
+  width: 100%;
+  max-height: 15rem; /* Tailwind's max-h-60 */
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.cityInputItem {
+  padding: 0.5rem; /* Tailwind's p-2 */
+  cursor: pointer;
+}
+
+.cityInputItem:hover {
+  background-color: #f3f4f6; /* Tailwind's hover:bg-gray-100 */
+}

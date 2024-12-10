@@ -25,6 +25,7 @@
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
+  font-family: Helvetica, sans-serif;
   background-color: #f5f5f5;
   transition: all 0.3s ease;
 }
@@ -43,6 +44,24 @@
 }
 
 .inputContainer input:focus {
+  outline: none;
+  border-color: #4169E1;
+  background-color: white;
+}
+
+.dateInput {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f5f5f5;
+  transition: all 0.3s ease;
+  height: 46.09px; /* Adjust the height as needed */
+  font-family: Helvetica, sans-serif; /* Use the same font family as other inputs */
+}
+
+.dateInput:focus {
   outline: none;
   border-color: #4169E1;
   background-color: white;
