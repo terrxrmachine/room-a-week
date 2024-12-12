@@ -41,13 +41,11 @@
 
 .outline {
   background-color: transparent;
-  border: 1px solid #4a90e2;
   color: #4a90e2;
 }
 
 .outline:hover {
-  background-color: #4a90e2;
-  color: white;
+  color: gray;
 }
 
 .fullWidth {
@@ -67,7 +65,6 @@
 /* Carousel Button styles */
 .carouselButton {
   padding: 0.5rem;
-  border-radius: 50%;
   min-width: 40px;
   height: 40px;
 }

@@ -1,7 +1,6 @@
 import styles from "./Input.module.css";
 
 function Input({
-  label,
   required,
   type = "text",
   name,
@@ -12,12 +11,6 @@ function Input({
 }) {
   return (
     <div className={styles.inputGroup}>
-      {label && (
-        <label>
-          {label}
-          {required && <span className={styles.required}>(Required)</span>}
-        </label>
-      )}
       <div className={styles.inputContainer}>
         {type === "date" ? (
           <input

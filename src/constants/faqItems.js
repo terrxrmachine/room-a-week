@@ -26,7 +26,7 @@ export const faqItems = [
     {
       question: "What's the cost of moving in?",
       answer:
-        "Generally the cost to move in is 1st week’s rent plus $19 for the background check.",
+        "Generally the cost to move in is 1st week’s rent plus $19 for the background check (refunded if not approved).",
     },
     {
       question: "Can I bring pets?",

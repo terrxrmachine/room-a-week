@@ -31,7 +31,7 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .logoLink {
@@ -43,8 +43,8 @@
 }
 
 .logo {
-  height: 30px;
-  /* Применяем серый цвет к SVG */
+  min-height: 20px;
+  max-height: 100px;
   filter: grayscale(1) brightness(0.8);
   transition: filter 0.3s ease;
 }
@@ -60,7 +60,7 @@
     border-radius: 0;
   }
   .logos {
-    gap: 1.5rem;
+    gap: 1rem;
   }
   
   .logo {

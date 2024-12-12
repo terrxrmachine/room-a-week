@@ -1,6 +1,6 @@
 .container {
   width: 600px;
-  height: 654px;
+  height: 560px;
   margin-top: 4rem;
   padding: 2rem;
   background: white;
@@ -41,7 +41,7 @@
   border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16/9;
-  margin: 4rem 0;
+  margin: 2rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
 }
@@ -92,7 +92,7 @@
 
 .callToAction h2 {
   font-family: Futura;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;

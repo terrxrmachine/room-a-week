@@ -1,7 +1,19 @@
 import styles from "./Featured.module.css";
+import { useEffect, useState } from "react";
 import { logos } from "../../constants/logos";
 
 function Featured() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); // Проверить изначальное состояние
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section className={styles.featured}>
       <div className={styles.container}>
@@ -17,7 +29,19 @@ function Featured() {
               rel="noopener noreferrer"
               className={styles.logoLink}
             >
-              <img src={logo.src} alt={logo.alt} className={styles.logo} />
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className={styles.logo}
+                style={{
+                  width: isMobile
+                    ? logo.mobileWidth || "auto"
+                    : logo.width || "auto",
+                  height: isMobile
+                    ? logo.mobileHeight || "20px"
+                    : logo.height || "30px",
+                }}
+              />
             </a>
           ))}
         </div>

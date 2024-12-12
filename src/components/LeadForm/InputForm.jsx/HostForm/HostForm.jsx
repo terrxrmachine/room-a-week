@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, User } from "lucide-react";
 import Input from "../../../ui/Input/Input";
 import CityInput from "../../../ui/CityInput/CityInput";
 import styles from "../Input.module.css";
@@ -39,6 +39,7 @@ function HostForm({ formData, handleChange, setFormData }) {
           value={formData.firstName}
           onChange={handleChange}
           placeholder="Enter First Name"
+          icon={User}
         />
         <Input
           label="Last Name"
@@ -47,6 +48,7 @@ function HostForm({ formData, handleChange, setFormData }) {
           value={formData.lastName}
           onChange={handleChange}
           placeholder="Enter Last Name"
+          icon={User}
         />
       </div>
 

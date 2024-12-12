@@ -1,6 +1,7 @@
 import InputForm from "./InputForm.jsx/InputForm";
 import { VideoForm } from "./VideoForm/VideoForm";
 import styles from "./Leadform.module.css";
+import ScrollButton from "../ui/Buttons/ScrollButton/ScrollButton";
 
 function LeadForm() {
   return (
@@ -9,6 +10,7 @@ function LeadForm() {
         <InputForm />
         <VideoForm />
       </div>
+      <ScrollButton />
     </div>
   );
 }

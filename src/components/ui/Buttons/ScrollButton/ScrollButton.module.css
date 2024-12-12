@@ -1,0 +1,44 @@
+.scrollButtonContainer {
+  position: absolute;
+  bottom: 10px;
+  animation: bounce 1.5s infinite;
+}
+
+.scrollButton {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.span {
+    font-size: 1rem;
+}
+
+/* Bouncing animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .scrollButtonContainer {
+    display: none;
+  }
+}

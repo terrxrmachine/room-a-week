@@ -21,7 +21,7 @@ function InputForm() {
           city: "",
         }
       : {
-          name: "",
+          firstName: "",
           email: "",
           moveInDate: "",
           city: "",
