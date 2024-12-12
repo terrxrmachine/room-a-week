@@ -1,83 +1,83 @@
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/futura.ttf');
+  src: url('./fonts/futura.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Bold.ttf');
+  src: url('./fonts/Futura-Bold.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Bold-Italic.ttf');
+  src: url('./fonts/Futura-Bold-Italic.ttf');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Book.ttf');
+  src: url('./fonts/Futura-Book.ttf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Book-Italic.ttf');
+  src: url('./fonts/Futura-Book-Italic.ttf');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Extra-Black.ttf');
+  src: url('./fonts/Futura-Extra-Black.ttf');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Heavy.ttf');
+  src: url('./fonts/Futura-Heavy.ttf');
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Heavy-Italic.ttf');
+  src: url('./fonts/Futura-Heavy-Italic.ttf');
   font-weight: 800;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Light.ttf');
+  src: url('./fonts/Futura-Light.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Light-Italic.ttf');
+  src: url('./fonts/Futura-Light-Italic.ttf');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/future-medium.ttf');
+  src: url('./fonts/future-medium.ttf');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/future-medium-condensed.ttf');
+  src: url('./fonts/future-medium-condensed.ttf');
   font-weight: 500;
   font-style: normal;
   font-stretch: condensed;
@@ -85,21 +85,21 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-Medium-Italic.ttf');
+  src: url('./fonts/Futura-Medium-Italic.ttf');
   font-weight: 500;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-XBlk-BT.ttf');
+  src: url('./fonts/Futura-XBlk-BT.ttf');
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Futura';
-  src: url('./assets/fonts/Futura-CondensedLight.ttf');
+  src: url('./fonts/Futura-CondensedLight.ttf');
   font-weight: 300;
   font-style: normal;
   font-stretch: condensed;
@@ -107,21 +107,21 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/Helvetica-Bold.ttf');
+  src: url('./fonts/Helvetica-Bold.ttf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/Helvetica-BoldOblique.ttf');
+  src: url('./fonts/Helvetica-BoldOblique.ttf');
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-compressed-5871d14b6903a.ttf');
+  src: url('./fonts/helvetica-compressed-5871d14b6903a.ttf');
   font-weight: normal;
   font-style: normal;
   font-stretch: condensed;
@@ -129,21 +129,21 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-light-587ebe5a59211.ttf');
+  src: url('./fonts/helvetica-light-587ebe5a59211.ttf');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/Helvetica-Oblique.ttf');
+  src: url('./fonts/Helvetica-Oblique.ttf');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/helvetica-rounded-bold-5871d05ead8de.ttf');
+  src: url('./fonts/helvetica-rounded-bold-5871d05ead8de.ttf');
   font-weight: bold;
   font-style: normal;
   font-stretch: expanded;
@@ -151,7 +151,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/fonts/Helvetica.ttf');
+  src: url('./fonts/Helvetica.ttf');
   font-weight: normal;
   font-style: normal;
 }

@@ -32,4 +32,3 @@ function ScrollButton() {
 }
 
 export default ScrollButton;
-ц;
