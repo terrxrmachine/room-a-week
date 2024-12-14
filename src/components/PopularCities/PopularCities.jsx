@@ -1,19 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { imagesCities } from "../../constants/imagesCities";
 import styles from "./Cities.module.css";
 import CityCard from "../ui/CityCard/CityCard";
-import Modal from "../ui/Modal/Modal";
-
 
 const PopularCities = () => {
-  const [showModal, setShowModal] = useState(false);
-  const [selectedCity, setSelectedCity] = useState(null);
-
-  const handleCityClick = (city) => {
-    setSelectedCity(city);
-    setShowModal(true);
-  };
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Explore a Room A Week</h1>
@@ -25,16 +15,9 @@ const PopularCities = () => {
             name={city.name}
             image={city.image}
             price={city.price}
-            onClick={handleCityClick}
           />
         ))}
       </div>
-      {showModal && selectedCity && (
-        <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-          <h2>{selectedCity.name} Rooms From {selectedCity.price} Per Week</h2>
-          <p>Register to Explore Options in {selectedCity.name}</p>
-        </Modal>
-      )}
     </div>
   );
 };
