@@ -9,35 +9,38 @@
   animation: fadeIn 0.2s ease-out;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.scrollWrapper {
-  min-height: 100%;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .container {
-  position: relative;
-  animation: slideIn 0.3s ease-out;
-  z-index: 10000;
-  width: fit-content;
-  margin: auto;
+  width: 100%;
+  max-width: 600px;
   background-color: white;
   border-radius: 12px;
-  padding: 5rem 5rem 5rem 5rem;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease-out;
+  z-index: 10000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .closeButton {
-  position: absolute;
-  top: 17px;
-  right: 17px;
   border: none;
   background: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
   color: #666;
   width: 30px;
@@ -52,6 +55,37 @@
 
 .closeButton:hover {
   opacity: 0.8;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.termsAndConditions {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.submitButton {
+  background-color: #e11b1b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #c01111;
 }
 
 @keyframes fadeIn {
@@ -75,13 +109,16 @@
 }
 
 @media (max-width: 48rem) {
-  .scrollWrapper {
-    padding: 1rem 0.5rem;
-    align-items: flex-start; /* Better mobile experience */
+  .container {
+    width: 90%;
+    padding: 1.5rem;
   }
 
-  .container {
-    width: 100%; /* Full width on mobile */
-    margin: 0;
+  .header h2 {
+    font-size: 1.25rem;
+  }
+
+  .inputGroup {
+    flex-direction: column;
   }
 }
