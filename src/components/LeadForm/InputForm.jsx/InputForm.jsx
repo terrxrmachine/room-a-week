@@ -49,7 +49,13 @@ function InputForm() {
     const sheetType = formType === "host" ? "host" : "rent";
     const apiUrl = `https://api.sheetbest.com/sheets/bbcbcda8-3941-4b79-b337-b84399428d27?sheet=${sheetType}`;
 
-    console.log("Submitting form data:", formData);
+    // Создаем новый объект с данными формы и добавляем поле type
+    const submissionData = {
+      ...formData,
+      type: sheetType, // Добавляем поле type со значением 'host' или 'rent'
+    };
+
+    console.log("Submitting form data:", submissionData);
 
     try {
       const response = await fetch(apiUrl, {
@@ -57,7 +63,7 @@ function InputForm() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(submissionData),
       });
 
       if (response.ok) {
@@ -130,7 +136,11 @@ function InputForm() {
               setFormData={setFormData}
             />
           ) : (
-            <RentForm formData={formData} handleChange={handleChange} />
+            <RentForm
+              formData={formData}
+              handleChange={handleChange}
+              setFormData={setFormData}
+            />
           )}
 
           <p className={styles.terms}>
