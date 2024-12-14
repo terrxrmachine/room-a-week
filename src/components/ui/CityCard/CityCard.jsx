@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./Citycard.module.css";
+import React from 'react';
+import styles from './CityCard.module.css';
 
-const CityCard = ({ name, image, price }) => (
-  <button className={styles.card}>
+const CityCard = ({ name, image, price, onClick }) => (
+  <button className={styles.card} onClick={() => onClick({ name, image, pricePerWeek: price })}>
     <div className={styles.imageContainer}>
       <img src={image} alt={`${name} city`} className={styles.image} />
       <div className={styles.content}>

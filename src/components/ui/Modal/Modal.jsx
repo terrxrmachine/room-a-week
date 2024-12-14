@@ -1,22 +1,22 @@
-import { useEffect } from "react";
-import styles from "./Modal.module.css";
+import { useEffect } from 'react';
+import styles from './Modal.module.css';
 
-const Modal = ({ isOpen, onClose, children, containerClassName = "" }) => {
+const Modal = ({ isOpen, onClose, children, containerClassName = '' }) => {
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === "Escape") {
+      if (e.key === 'Escape') {
         onClose();
       }
     };
 
     if (isOpen) {
-      document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden";
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
-      document.removeEventListener("keydown", handleEscape);
-      document.body.style.overflow = "unset";
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
 
