@@ -43,10 +43,11 @@ const Modal = ({ isOpen, onClose, children, containerClassName = '' }) => {
           className={`${styles.container} ${containerClassName}`}
           onClick={(e) => e.stopPropagation()}
         >
-          <button className={styles.closeButton} onClick={onClose}>
-            ×
-          </button>
           <form onSubmit={handleSubmit}>
+            <button className={styles.closeButton} onClick={onClose}>
+              ×
+            </button>
+            {children}
             <div className={styles.inputGroup}>
               <Input
                 label="First Name"
@@ -68,11 +69,16 @@ const Modal = ({ isOpen, onClose, children, containerClassName = '' }) => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
+            <div className={styles.terms}>
+              <p>
+                By signing up, you agree that you have reviewed and accept Terms of Use and Privacy Policy
+              </p>
+            </div>
             <button type="submit" className={styles.submitButton}>
               Find a Room a Week
             </button>
           </form>
-          {children}
+
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import styles from "./Cities.module.css";
 import CityCard from "../ui/CityCard/CityCard";
 import Modal from "../ui/Modal/Modal";
 
+
 const PopularCities = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState(null);
@@ -30,8 +31,8 @@ const PopularCities = () => {
       </div>
       {showModal && selectedCity && (
         <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
-          <h2>{selectedCity.name}</h2>
-          <p>From ${selectedCity.price} Per Week</p>
+          <h2>{selectedCity.name} Rooms From {selectedCity.price} Per Week</h2>
+          <p>Register to Explore Options in {selectedCity.name}</p>
         </Modal>
       )}
     </div>
