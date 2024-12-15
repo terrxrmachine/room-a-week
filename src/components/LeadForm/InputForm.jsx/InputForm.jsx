@@ -47,7 +47,7 @@ function InputForm() {
     e.preventDefault();
 
     const sheetType = formType === "host" ? "host" : "rent";
-    const apiUrl = `https://api.sheetbest.com/sheets/bbcbcda8-3941-4b79-b337-b84399428d27?sheet=${sheetType}`;
+    const apiUrl = `https://api.sheetbest.com/sheets/e999b749-2c7c-4bbd-9bb8-9d7bd32735c6?sheet=${sheetType}`;
 
     // Создаем новый объект с данными формы и добавляем поле type
     const submissionData = {
