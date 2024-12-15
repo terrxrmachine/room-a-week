@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./CityCard.module.css";
+import styles from "./Citycard.module.css";
 
 const CityCard = ({ name, image, price, onClick }) => (
   <button className={styles.card} onClick={onClick}>
