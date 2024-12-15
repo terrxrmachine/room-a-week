@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .inputLabel {
@@ -55,4 +55,19 @@
 
 .submitButton:hover {
   background-color: grey;
+}
+
+.title {
+    font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: #2c2c2c;
+  font-family: futura;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+  }
 }

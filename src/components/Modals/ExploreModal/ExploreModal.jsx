@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import Input from "../../ui/Input/Input";
 import Modal from "../../ui/Modal/Modal";
 import styles from "./ExploreModal.module.css";
+import Button from "../../ui/Buttons/Button";
 
-function ExploreModal({ selectedCity, onClose }) {
+function ExploreModal({ selectedCity, onClose, handleChange }) {
   // Состояния для инпутов
   const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [moveInDate, setMoveInDate] = useState(""); // New state for move-in date
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -15,11 +16,11 @@ function ExploreModal({ selectedCity, onClose }) {
 
     const submissionData = {
       firstName: firstName,
-      lastName: lastName,
       email: email,
       city: selectedCity.name,
       pricePerWeek: selectedCity.price,
       type: "rent", // Добавленный фиксированный параметр
+      moveInDate: moveInDate, // Use the state variable here
     };
 
     console.log("Submitting form data:", submissionData);
@@ -49,55 +50,60 @@ function ExploreModal({ selectedCity, onClose }) {
 
   return (
     <Modal isOpen={true} onClose={onClose}>
-      <h2>
-        {selectedCity.name} Rooms From ${selectedCity.price} Per Week
-      </h2>
+      <div>
+        <h2 className={styles.title}>
+          {selectedCity.name} Rooms From ${selectedCity.price} Per Week
+        </h2>
 
-      {!isSubmitted ? (
-        <form onSubmit={handleSubmit}>
-          <h5>
-            Name <span className={styles.reqText}>(Required)</span>
-          </h5>
-          <div className={styles.inputGroup}>
-            <Input
-              label="First Name"
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)}
-              required
-            />
-            <Input
-              label="Last Name"
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)}
-              required
-            />
+        {!isSubmitted ? (
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div>
+              <h5>Name</h5>
+              <Input
+                label="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <h5>Email</h5>
+              <Input
+                label="Email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <h5>Move in date</h5>
+              <Input
+                label="Your Move In Date"
+                type="date"
+                name="moveInDate"
+                value={moveInDate || ""} // Use the state variable here
+                onChange={(e) => setMoveInDate(e.target.value)} // Update moveInDate state
+                placeholder="Your Move In Date"
+              />
+            </div>
+            <div>
+              <p className={styles.terms}>
+                By signing up, you agree that you have reviewed and accept Terms
+                of Use and Privacy Policy
+              </p>
+            </div>
+            <Button type="submit" className={styles.submitButton}>
+              Find a Room a Week
+            </Button>
+          </form>
+        ) : (
+          <div className={styles.successMessage}>
+            <h3>Success!</h3>
+            <p>Your form has been submitted successfully.</p>
           </div>
-          <h5>
-            Email <span className={styles.reqText}>(Required)</span>
-          </h5>
-          <Input
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <div>
-            <p className={styles.terms}>
-              By signing up, you agree that you have reviewed and accept Terms
-              of Use and Privacy Policy
-            </p>
-          </div>
-          <button type="submit" className={styles.submitButton}>
-            Find a Room a Week
-          </button>
-        </form>
-      ) : (
-        <div className={styles.successMessage}>
-          <h3>Success!</h3>
-          <p>Your form has been submitted successfully.</p>
-        </div>
-      )}
+        )}
+      </div>
     </Modal>
   );
 }

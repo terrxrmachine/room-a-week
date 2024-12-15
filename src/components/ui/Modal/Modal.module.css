@@ -83,5 +83,6 @@
   .container {
     width: 100%; /* Full width on mobile */
     margin: 0;
+    padding: 1dvh 1rem 1rem 1rem;
   }
 }
