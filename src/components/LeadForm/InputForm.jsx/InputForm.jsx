@@ -12,7 +12,7 @@ function InputForm() {
   const location = useLocation();
   const formType = location.pathname === "/host" ? "host" : "rent";
 
-  const [formData, setFormData] = useState(
+  const getInitialFormData = () =>
     formType === "host"
       ? {
           firstName: "",
@@ -26,9 +26,9 @@ function InputForm() {
           email: "",
           moveInDate: "",
           city: "",
-        }
-  );
+        };
 
+  const [formData, setFormData] = useState(getInitialFormData());
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Синхронизация `formData` при изменении `formType`
@@ -70,6 +70,7 @@ function InputForm() {
       if (response.ok) {
         console.log("Form successfully submitted!");
         setIsModalOpen(true);
+        setFormData(getInitialFormData());
       } else {
         console.error("Failed to submit form.");
       }

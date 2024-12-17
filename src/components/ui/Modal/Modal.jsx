@@ -23,7 +23,7 @@ const Modal = ({ isOpen, onClose, children, containerClassName = "" }) => {
   if (!isOpen) return null;
 
   return (
-    <div className={styles.overlay}>
+    <div className={styles.overlay} onClick={onClose}>
       <div className={styles.scrollWrapper}>
         <div
           className={`${styles.container} ${containerClassName}`}

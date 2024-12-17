@@ -40,27 +40,6 @@
   color: #4a90e2;
 }
 
-.submitButton {
-  background-color: #e11b1b;
-  color: white;
-  width: 100%;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 500;
-  outline: 0;
-  font-size: 19px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.submitButton:hover {
-  background-color: grey;
-}
-
 .title {
     font-size: 2rem;
   font-weight: 600;

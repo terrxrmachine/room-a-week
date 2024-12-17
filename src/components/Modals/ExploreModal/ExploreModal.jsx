@@ -95,7 +95,8 @@ function ExploreModal({ selectedCity, onClose, handleChange }) {
                 and <Link to="/privacy">Privacy Statement</Link>
               </p>
             </div>
-            <Button type="submit" className={styles.submitButton}>
+            <Button type="submit" className={styles.submitButton}
+            variant="primary">
               Find a Room a Week
             </Button>
           </form>
