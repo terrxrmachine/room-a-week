@@ -6,6 +6,7 @@ import Button from "../../ui/Buttons/Button";
 import HostForm from "./HostForm/HostForm";
 import RentForm from "./RentForm/RentForm";
 import MessageSent from "../../Modals/MessageSent/MessageSent";
+import { Link } from "react-router-dom";
 
 function InputForm() {
   const location = useLocation();
@@ -144,8 +145,8 @@ function InputForm() {
           )}
 
           <p className={styles.terms}>
-            By clicking the button below you agree with our Terms & Conditions
-            and Privacy Statement
+            By clicking the button below you agree with our <Link to="/terms">Terms & Conditions </Link>
+             and <Link to="/privacy">Privacy Statement</Link>
           </p>
 
           <Button

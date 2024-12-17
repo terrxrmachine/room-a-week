@@ -103,6 +103,10 @@
   line-height: 1.4;
 }
 
+.terms :hover {
+  color: #4a90e2;
+}
+
 .submitButton {
   width: 100%;
   padding: 1rem;

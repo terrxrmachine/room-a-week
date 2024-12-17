@@ -36,6 +36,10 @@
   line-height: 1.4;
 }
 
+.terms :hover {
+  color: #4a90e2;
+}
+
 .submitButton {
   background-color: #e11b1b;
   color: white;

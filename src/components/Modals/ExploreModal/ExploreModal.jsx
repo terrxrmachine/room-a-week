@@ -3,6 +3,8 @@ import Input from "../../ui/Input/Input";
 import Modal from "../../ui/Modal/Modal";
 import styles from "./ExploreModal.module.css";
 import Button from "../../ui/Buttons/Button";
+import { Link } from "react-router-dom";
+
 
 function ExploreModal({ selectedCity, onClose, handleChange }) {
   // Состояния для инпутов
@@ -89,8 +91,8 @@ function ExploreModal({ selectedCity, onClose, handleChange }) {
             </div>
             <div>
               <p className={styles.terms}>
-                By signing up, you agree that you have reviewed and accept Terms
-                of Use and Privacy Policy
+                By signing up, you agree that you have reviewed and accept <Link to="/terms">Terms & Conditions </Link>
+                and <Link to="/privacy">Privacy Statement</Link>
               </p>
             </div>
             <Button type="submit" className={styles.submitButton}>
