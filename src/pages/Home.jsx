@@ -10,12 +10,12 @@ function Home() {
   return (
     <div>
       <LeadForm />
-      <Featured />
+      <Featured id="featured" />
       <PopularCities />
       <Trending />
       <Reviews />
-      <Explore />
-      <FAQ />
+      <Explore id="explore" />
+      <FAQ id="faqs" />
     </div>
   );
 }

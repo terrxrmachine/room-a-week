@@ -1,9 +1,21 @@
 import { Helmet } from "react-helmet-async";
 import { Link, NavLink } from "react-router-dom";
-import { Home, Search } from "lucide-react";
+import { Home, Search, Telescope, Handshake, TableOfContents } from "lucide-react";
 import styles from "./Header.module.css";
 
 function Header() {
+  const scrollToElement = (elementId) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      const scrollOptions = {
+        behavior: "smooth",
+        block: elementId === "faqs" ? "start" : "center", // from "start" only for FAQs for better view
+      };
+      element.scrollIntoView(scrollOptions);
+    }
+  };
+
+
   return (
     <>
       <Helmet>
@@ -40,6 +52,39 @@ function Header() {
               <span className={styles.mobileText}>Rent</span>
             </NavLink>
           </nav>
+
+          <div className="MenuButtonsWrapper">
+            <div className="MenuItem">
+              <Telescope size={20} />
+              <button
+                className={`${styles.MenuButtons}`}
+                onClick={() => scrollToElement("explore")}
+              >
+                Explore
+              </button>
+            </div>
+
+            <div className="MenuItem">
+              <Handshake size={20} />
+              <button
+                className={`${styles.MenuButtons}`}
+                onClick={() => scrollToElement("featured")}
+              >
+                Featured
+              </button>
+            </div>
+
+            <div className="MenuItem">
+              <TableOfContents size={20} />
+              <button
+                className={`${styles.MenuButtons}`}
+                onClick={() => scrollToElement("faqs")}
+              >
+                FAQs
+              </button>
+            </div>
+          </div>
+
         </div>
       </header>
     </>

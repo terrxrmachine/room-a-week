@@ -3,9 +3,9 @@ import FAQCard from "./FAQCard/FAQCard";
 import InfoCard from "./InfoCard/InfoCard";
 import styles from "./FAQ.module.css";
 
-function FAQ() {
+function FAQ({id}) {
   return (
-    <div className={styles.container}>
+    <div  id={"faqs"} className={styles.container}>
       <div className={styles.forms}>
         <FAQCard />
         <InfoCard />

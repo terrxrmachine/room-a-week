@@ -83,6 +83,32 @@
   width: 100%;
 }
 
+.MenuButtonsWrapper {
+  display: flex;
+  gap: 30px;
+  margin-top: 1rem;
+}
+
+.MenuItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.MenuButtons {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+  font-weight: 500;
+}
+
+.MenuButtons:hover {
+  transform: translateY(-2px);
+}
+
 .desktopText {
   display: inline;
 }
@@ -105,14 +131,27 @@
   }
 
   .desktopText {
-    display: none; /* Скрыть длинный текст */
+    display: none;
+    /* Скрыть длинный текст */
   }
 
   .mobileText {
-    display: inline; /* Показать короткий текст */
+    display: inline;
+    /* Показать короткий текст */
   }
 
   .nav a::after {
-    display: none; /* Убрать подчеркивание на мобильных, если не нужно */
+    display: none;
+    /* Убрать подчеркивание на мобильных, если не нужно */
+  }
+}
+
+@media (max-width: 600px) {
+  .MenuButtonsWrapper {
+    gap: 10px;
+  }
+
+  .MenuButtons {
+    font-size: 14px;
   }
 }

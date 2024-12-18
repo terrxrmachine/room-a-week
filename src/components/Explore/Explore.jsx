@@ -1,9 +1,9 @@
 import styles from "./Explore.module.css";
 import Button from "../ui/Buttons/Button";
 
-function Explore() {
+function Explore({ id }) {
   return (
-    <div className={styles.container}>
+    <div id={"explore"} className={styles.container}>
       <div className={styles.content}>
         <h2 className={styles.title}>Find a Room A Week</h2>
         <p className={styles.text}>

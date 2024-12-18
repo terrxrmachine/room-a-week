@@ -2,7 +2,7 @@ import styles from "./Featured.module.css";
 import { useEffect, useState } from "react";
 import { logos } from "../../constants/logos";
 
-function Featured() {
+function Featured({id}) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -16,6 +16,7 @@ function Featured() {
 
   return (
     <section className={styles.featured}>
+      <div id={"featured"} className={styles.container}></div>
       <div className={styles.container}>
         <h2 className={styles.title}>
           <span className={styles.highlight}>Co-Living</span> AS FEATURED ON
